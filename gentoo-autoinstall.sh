@@ -66,8 +66,9 @@ EOF
 # --------------------------------------------
 # Portage Configuration
 # --------------------------------------------
-mkdir -p /mnt/gentoo/etc/portage/repos.conf
-cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf
+# mkdir -p /mnt/gentoo/etc/portage/repos.conf
+# cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf
+getuto
 
 # --------------------------------------------
 # Chroot Preparation
