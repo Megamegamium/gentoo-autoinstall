@@ -46,11 +46,14 @@ tar xpf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner
 # make.conf Configuration
 # --------------------------------------------
 cat <<EOF > /mnt/gentoo/etc/portage/make.conf
-COMMON_FLAGS="-march=tigerlake -O2 -pipe"
+COMMON_FLAGS="-march=native -O2 -pipe"
 FEATURES="getbinpkg"
-EMERGE_DEFAULT_OPTS="--getbinpkg --with-bdeps=y"
-GENTOO_MIRRORS="https://distfiles.gentoo.org https://gentoo.osuosl.org/"
-BINHOST="https://gentoo.osuosl.org/experimental/amd64/binpkg/default/linux/23.0/x86-64/"
+EMERGE_DEFAULT_OPTS="--getbinpkg"
+# EMERGE_DEFAULT_OPTS="--getbinpkg --with-bdeps=y"
+GENTOO_MIRRORS="https://mirrors.evowise.com/gentoo/ https://mirrors.lug.mtu.edu/gentoo/ http://distfiles.gentoo.org"
+# GENTOO_MIRRORS="https://distfiles.gentoo.org https://gentoo.osuosl.org/"
+BINHOST="https://distfiles.gentoo.org/releases/amd64/binpackages/23.0/x86-64/"
+# BINHOST="https://gentoo.osuosl.org/experimental/amd64/binpkg/default/linux/23.0/x86-64/"
 
 USE="X wayland elogind systemd alsa bluetooth networkmanager wifi nvidia xfs"
 ACCEPT_LICENSE="*"
