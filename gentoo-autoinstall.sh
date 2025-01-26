@@ -50,7 +50,7 @@ COMMON_FLAGS="-march=tigerlake -O2 -pipe"
 FEATURES="getbinpkg"
 EMERGE_DEFAULT_OPTS="--getbinpkg --with-bdeps=y"
 GENTOO_MIRRORS="https://distfiles.gentoo.org https://gentoo.osuosl.org/"
-BINHOST="https://gentoo.osuosl.org/experimental/amd64/binpkg/default/linux/17.1/x86-64/"
+BINHOST="https://gentoo.osuosl.org/experimental/amd64/binpkg/default/linux/23.0/x86-64/"
 
 USE="X wayland elogind systemd alsa bluetooth networkmanager wifi nvidia xfs"
 ACCEPT_LICENSE="*"
@@ -92,7 +92,7 @@ export PS1="(chroot) \$PS1"
 
 # Portage sync
 emerge-webrsync
-eselect profile set default/linux/amd64/17.1/desktop/systemd
+eselect profile set default/linux/amd64/23.0/desktop/systemd
 
 # Timezone
 ln -sf /usr/share/zoneinfo/UTC /etc/localtime
