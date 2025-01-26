@@ -48,7 +48,7 @@ tar xpf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner
 cat <<EOF > /mnt/gentoo/etc/portage/make.conf
 COMMON_FLAGS="-march=tigerlake -O2 -pipe"
 FEATURES="getbinpkg"
-EMERGE_DEFAULT_OPTS="--getbinpkg"
+EMERGE_DEFAULT_OPTS="--getbinpkg --with-bdeps=y"
 GENTOO_MIRRORS="https://distfiles.gentoo.org https://gentoo.osuosl.org/"
 BINHOST="https://gentoo.osuosl.org/experimental/amd64/binpkg/default/linux/23.0/x86-64/"
 
